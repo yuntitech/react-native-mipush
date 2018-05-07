@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
   s.homepage     = "https://github.com/a289459798/react-native-mipush"
   s.license      = "MIT"
   # s.license      = { :type => "MIT", :file => "FILE_LICENSE" }
-  # s.author             = { "a289459798" => "" }
+  s.author             = { "a289459798" => "289459798@qq.com" }
   s.platform     = :ios, "8.0"
   s.source       = { :git => "https://github.com/a289459798/react-native-mipush.git", :tag => "master" }
   s.source_files  = "ios/**/*.{h,m}"
