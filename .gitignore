@@ -7,3 +7,5 @@ build-res/
 *.iml
 *.idea/
 *.DS_Store
+/ios/RCTMIPushModule/RCTMIPushModule.xcodeproj/xcuserdata/
+/ios/RCTMIPushModule/RCTMIPushModule.xcodeproj/project.xcworkspace/xcuserdata/
