@@ -12,7 +12,7 @@
 
 @protocol MiPushSDKDelegate <NSObject>
 
-@optional
+@optional 
 
 /**
  * MiPushSDK 请求结果回调
