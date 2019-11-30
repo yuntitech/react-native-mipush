@@ -16,7 +16,8 @@ Pod::Spec.new do |s|
   s.source_files  = "ios/**/*.{h,m}"
   s.requires_arc = true
 
-  s.dependency "React"
+  s.dependency "React-Core"
+  s.dependency "React-RCTPushNotification"
   s.framework = 'UserNotifications'
   s.vendored_libraries = "ios/RCTMIPushModule/RCTMIPushModule/libMiPushSDK.a"
   s.public_header_files = 'ios/RCTMIPushModule/RCTMIPushModule/*.h'
