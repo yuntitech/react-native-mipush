@@ -66,9 +66,7 @@ RCT_EXPORT_METHOD(unsetAccount:(NSString *)text)
 }
 
 + (void)application:(id)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    
     [MiPushSDK registerMiPush:self];
-    NSLog(@"注册");
 }
 
 + (void)application:(id)application didRegisterUserNotificationSettings:(id)notificationSettings {
