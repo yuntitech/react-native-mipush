@@ -1,6 +1,6 @@
 {
   "name": "react-native-xmpush",
-  "version": "0.2.4",
+  "version": "0.3.4",
   "description": "集成小米推送",
   "main": "index.js",
   "scripts": {
@@ -14,6 +14,10 @@
     "react-native",
     "mipush"
   ],
+  "peerDependencies": {
+    "react": ">=16.9.0",
+    "react-native": ">=0.61.0"
+  },
   "author": "zzy",
   "license": "ISC",
   "bugs": {

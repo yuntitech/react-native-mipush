@@ -93,4 +93,14 @@ public class MIPushPackage implements ReactPackage {
         return false;
     }
 
+    public static void reInitPush(Context ctx) {
+        try {
+            String appId = MIPushHelper.getMIPushValue(ctx.getApplicationContext(), "MIPUSH_APPID");
+            String appKey = MIPushHelper.getMIPushValue(ctx.getApplicationContext(), "MIPUSH_APPKEY");
+            MiPushClient.registerPush(ctx.getApplicationContext(), appId, appKey);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
 }
