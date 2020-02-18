@@ -9,7 +9,6 @@ import com.facebook.react.bridge.JavaScriptModule;
 import com.facebook.react.bridge.NativeModule;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.uimanager.ViewManager;
-import com.xiaomi.channel.commonutils.logger.LoggerInterface;
 import com.xiaomi.mipush.sdk.Logger;
 import com.xiaomi.mipush.sdk.MiPushClient;
 import com.xiaomi.mipush.sdk.MiPushMessage;
@@ -43,26 +42,6 @@ public class MIPushPackage implements ReactPackage {
 
                 MiPushClient.registerPush(reactContext.getApplicationContext(), appId, appKey);
             }
-
-            //打开Log
-            LoggerInterface newLogger = new LoggerInterface() {
-
-                @Override
-                public void setTag(String tag) {
-                    // ignore
-                }
-
-                @Override
-                public void log(String content, Throwable t) {
-                    Log.d(TAG, content, t);
-                }
-
-                @Override
-                public void log(String content) {
-                    Log.d(TAG, content);
-                }
-            };
-            Logger.setLogger(reactContext, newLogger);
 
         } catch (Exception e) {
             e.printStackTrace();
