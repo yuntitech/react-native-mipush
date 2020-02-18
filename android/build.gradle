@@ -28,4 +28,5 @@ repositories {
 dependencies {
     compile fileTree(dir: "libs", include: ["*.jar"])
     compile 'com.facebook.react:react-native:+'
+    api 'com.tencent.xinge:mipush:4.3.2-xiaomi-release'
 }
