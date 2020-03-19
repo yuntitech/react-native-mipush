@@ -103,7 +103,7 @@ public class MIPushPackage implements ReactPackage {
             appInfo = context.getPackageManager()
                     .getApplicationInfo(context.getPackageName(), PackageManager.GET_META_DATA);
             if (appInfo != null && appInfo.metaData != null) {
-                return Arrays.asList(59).contains(appInfo.metaData.getInt("appId"));
+                return appInfo.metaData.getBoolean("xgpushAvailble", false);
             }
         } catch (PackageManager.NameNotFoundException e) {
             e.printStackTrace();
