@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "react-native-mipush"
-  s.version      = "0.1.0"
+  s.version      = "0.3.5"
   s.summary      = "React Native MiPush"
 
   s.description  = <<-DESC
@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   s.dependency "React-Core"
-  s.dependency "React-RCTPushNotification"
+  s.dependency "RNCPushNotificationIOS"
   s.framework = 'UserNotifications'
   s.vendored_libraries = "ios/RCTMIPushModule/RCTMIPushModule/libMiPushSDK.a"
   s.public_header_files = 'ios/RCTMIPushModule/RCTMIPushModule/*.h'

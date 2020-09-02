@@ -71,33 +71,35 @@ RCT_EXPORT_METHOD(unsetAccount:(NSString *)text)
 
 + (void)application:(id)application didRegisterUserNotificationSettings:(id)notificationSettings {
     
-    [RCTPushNotificationManager didRegisterUserNotificationSettings:notificationSettings];
+//    [RCTPushNotificationManager didRegisterUserNotificationSettings:notificationSettings];
 }
 
 + (void)application:(id)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
     
     [MiPushSDK bindDeviceToken:deviceToken];
-    [RCTPushNotificationManager didRegisterForRemoteNotificationsWithDeviceToken:deviceToken];
+//    [RCTPushNotificationManager didRegisterForRemoteNotificationsWithDeviceToken:deviceToken];
 }
 
 + (void)application:(id)application didReceiveRemoteNotification:(NSDictionary *)notification {
 
-    [RCTPushNotificationManager didReceiveRemoteNotification:notification];
+//    [RCTPushNotificationManager didReceiveRemoteNotification:notification];
 }
 
 + (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification {
 
-    [RCTPushNotificationManager didReceiveLocalNotification:notification];
+//    [RCTPushNotificationManager didReceiveLocalNotification:notification];
     [[NSNotificationCenter defaultCenter] postNotificationName:@"xmpush_click" object:notification.userInfo];
 }
 
 // 应用在前台收到通知
-+ (void)userNotificationCenter:(UNUserNotificationCenter *)center willPresentNotification:(UNNotification *)notification withCompletionHandler:(void (^)(UNNotificationPresentationOptions))completionHandler {
++ (void)userNotificationCenter:(UNUserNotificationCenter *)center
+       willPresentNotification:(UNNotification *)notification
+         withCompletionHandler:(void (^)(UNNotificationPresentationOptions))completionHandler {
 
     NSDictionary * userInfo = notification.request.content.userInfo;
     if([notification.request.trigger isKindOfClass:[UNPushNotificationTrigger class]]) {
 
-        [RCTPushNotificationManager didReceiveRemoteNotification:userInfo];
+//        [RCTPushNotificationManager didReceiveRemoteNotification:userInfo];
     }
     completionHandler(UNNotificationPresentationOptionAlert | UNNotificationPresentationOptionBadge | UNNotificationPresentationOptionSound);
 }
@@ -106,7 +108,7 @@ RCT_EXPORT_METHOD(unsetAccount:(NSString *)text)
 + (void)userNotificationCenter:(UNUserNotificationCenter *)center didReceiveNotificationResponse:(UNNotificationResponse *)response withCompletionHandler:(void (^)())completionHandler {
     NSDictionary * userInfo = response.notification.request.content.userInfo;
     if([response.notification.request.trigger isKindOfClass:[UNPushNotificationTrigger class]]) {
-        [RCTPushNotificationManager didReceiveRemoteNotification:userInfo];
+//        [RCTPushNotificationManager didReceiveRemoteNotification:userInfo];
     }
     [[NSNotificationCenter defaultCenter] postNotificationName:@"xmpush_click" object:userInfo];
     completionHandler();
