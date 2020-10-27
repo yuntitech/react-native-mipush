@@ -9,9 +9,9 @@
 import {
     NativeModules,
     Platform,
-    PushNotificationIOS,
     NativeEventEmitter
 } from 'react-native';
+import PushNotificationIOS from '@react-native-community/push-notification-ios';
 
 const MIPushModule = NativeModules.MIPushModule;
 
