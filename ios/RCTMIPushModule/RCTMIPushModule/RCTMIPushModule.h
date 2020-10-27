@@ -25,8 +25,12 @@
 + (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification;
 
 
-+ (void)userNotificationCenter:(UNUserNotificationCenter *)center willPresentNotification:(UNNotification *)notification withCompletionHandler:(void (^)(UNNotificationPresentationOptions))completionHandler;
++ (void)userNotificationCenter:(UNUserNotificationCenter *)center
+       willPresentNotification:(UNNotification *)notification
+         withCompletionHandler:(void (^)(UNNotificationPresentationOptions))completionHandler API_AVAILABLE(ios(10.0));
 
-+ (void)userNotificationCenter:(UNUserNotificationCenter *)center didReceiveNotificationResponse:(UNNotificationResponse *)response withCompletionHandler:(void (^)())completionHandler;
++ (void)userNotificationCenter:(UNUserNotificationCenter *)center
+didReceiveNotificationResponse:(UNNotificationResponse *)response
+         withCompletionHandler:(void (^)(void))completionHandler API_AVAILABLE(ios(10.0));
 
 @end
