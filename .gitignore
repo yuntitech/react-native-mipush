@@ -9,3 +9,4 @@ build-res/
 *.DS_Store
 /ios/RCTMIPushModule/RCTMIPushModule.xcodeproj/xcuserdata/
 /ios/RCTMIPushModule/RCTMIPushModule.xcodeproj/project.xcworkspace/xcuserdata/
+node_modules/
