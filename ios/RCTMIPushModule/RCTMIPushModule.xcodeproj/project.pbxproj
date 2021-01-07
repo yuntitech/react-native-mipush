@@ -10,6 +10,7 @@
 		2BC4EF001DBDFDDD00715730 /* RCTMIPushModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BC4EEFF1DBDFDDD00715730 /* RCTMIPushModule.m */; };
 		2BC4EF011DBDFDDD00715730 /* RCTMIPushModule.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2BC4EEFE1DBDFDDD00715730 /* RCTMIPushModule.h */; };
 		2BC4EF091DBDFE3700715730 /* libMiPushSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BC4EF071DBDFE3700715730 /* libMiPushSDK.a */; };
+		C7B41FA225A6B7E000F3941E /* libMiPushApnsAckSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C7B41FA125A6B7E000F3941E /* libMiPushApnsAckSDK.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +32,7 @@
 		2BC4EEFF1DBDFDDD00715730 /* RCTMIPushModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCTMIPushModule.m; sourceTree = "<group>"; };
 		2BC4EF071DBDFE3700715730 /* libMiPushSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMiPushSDK.a; sourceTree = "<group>"; };
 		2BC4EF081DBDFE3700715730 /* MiPushSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MiPushSDK.h; sourceTree = "<group>"; };
+		C7B41FA125A6B7E000F3941E /* libMiPushApnsAckSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMiPushApnsAckSDK.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7B41FA225A6B7E000F3941E /* libMiPushApnsAckSDK.a in Frameworks */,
 				2BC4EF091DBDFE3700715730 /* libMiPushSDK.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -64,6 +67,7 @@
 		2BC4EEFD1DBDFDDD00715730 /* RCTMIPushModule */ = {
 			isa = PBXGroup;
 			children = (
+				C7B41FA125A6B7E000F3941E /* libMiPushApnsAckSDK.a */,
 				2BC4EF071DBDFE3700715730 /* libMiPushSDK.a */,
 				2BC4EF081DBDFE3700715730 /* MiPushSDK.h */,
 				2BC4EEFE1DBDFDDD00715730 /* RCTMIPushModule.h */,
@@ -113,6 +117,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = 2BC4EEF21DBDFDDD00715730;
