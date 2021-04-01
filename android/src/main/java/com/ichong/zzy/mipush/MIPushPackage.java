@@ -39,20 +39,6 @@ public class MIPushPackage implements ReactPackage {
         if (checkXGPushAvailable(reactContext)) {
             return modules;
         }
-
-        try {
-            String appId = MIPushHelper.getMIPushValue(reactContext.getApplicationContext(), "MIPUSH_APPID");
-            String appKey = MIPushHelper.getMIPushValue(reactContext.getApplicationContext(), "MIPUSH_APPKEY");
-
-            if (shouldInit(reactContext.getApplicationContext())) {
-
-                MiPushClient.registerPush(reactContext.getApplicationContext(), appId, appKey);
-            }
-
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
         sReactContext = reactContext;
 
         modules.add(new MIPushModule(reactContext));
