@@ -23,9 +23,13 @@ repositories {
         // All of React Native (JS, Obj-C sources, Android binaries) is installed from npm
         url "$rootDir/../node_modules/react-native/android"
     }
+    flatDir {
+        dirs 'libs'
+    }
 }
 
 dependencies {
-    api fileTree(dir: "libs", include: ["*.aar"])
+//    api fileTree(dir: "libs", include: ["*.aar"])
     compile 'com.facebook.react:react-native:+'
+    implementation(name: 'MiPush_SDK_Client_5_0_8-C_3rd', ext: 'aar')
 }
