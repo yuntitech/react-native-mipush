@@ -31,5 +31,5 @@ repositories {
 dependencies {
 //    api fileTree(dir: "libs", include: ["*.aar"])
     compile 'com.facebook.react:react-native:+'
-    implementation(name: 'MiPush_SDK_Client_5_0_8-C_3rd', ext: 'aar')
+    implementation(name: 'MiPush_SDK_Client_5_1_0-C_3rd', ext: 'aar')
 }
