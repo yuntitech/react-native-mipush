@@ -16,6 +16,9 @@ android {
         abortOnError false
         warning 'InvalidPackage'
     }
+    repositories {
+        flatDir { dirs 'libs' }
+    }
 }
 
 repositories {
@@ -23,13 +26,9 @@ repositories {
         // All of React Native (JS, Obj-C sources, Android binaries) is installed from npm
         url "$rootDir/../node_modules/react-native/android"
     }
-    flatDir {
-        dirs 'libs'
-    }
 }
 
 dependencies {
-//    api fileTree(dir: "libs", include: ["*.aar"])
-    compile 'com.facebook.react:react-native:+'
-    implementation(name: 'MiPush_SDK_Client_5_1_0-C_3rd', ext: 'aar')
+    implementation 'com.facebook.react:react-native:+'
+    api(name: 'MiPush_SDK_Client_6_0_1-C_3rd', ext: 'aar')
 }
