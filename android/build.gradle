@@ -34,5 +34,5 @@ repositories {
 
 dependencies {
     implementation 'com.facebook.react:react-native:+'
-    implementation 'com.umeng.umsdk:xiaomi-push:7.9.2'
+    api 'com.umeng.umsdk:xiaomi-push:7.9.2'
 }
